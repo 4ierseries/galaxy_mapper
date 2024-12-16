@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galaxy Mapping in 3D</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #111;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #222;
+            padding: 15px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        #plot {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .fullscreen-btn {
+            background-color: #ff5722;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px;
+        }
+        .fullscreen-btn:hover {
+            background-color: #e64a19;
+        }
+        #plot iframe {
+            width: 100%;
+            height: 600px;
+        }
+        .filter-container {
+            margin: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .filter-container select {
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Galaxy Mapping in 3D</h1>
+</header>
+
+
+<div id="plot">
+    {{ plot_html|safe }}
+</div>
+
+
+</body>
+</html>
